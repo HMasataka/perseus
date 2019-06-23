@@ -52,3 +52,7 @@ func Reversed(slice []int) []int {
 	}
 	return slice
 }
+
+func Extend(A, B []int) []int {
+	return append(A, B...)
+}
