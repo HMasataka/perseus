@@ -30,6 +30,11 @@ Go slice operation extension
  * uint64
  * float32
  * float64
- 
+
+## Document
+
+ * https://godoc.org/github.com/sylba2050/perseus
+
  ## Reference  
+
  https://github.com/golang/go/wiki/SliceTricks
