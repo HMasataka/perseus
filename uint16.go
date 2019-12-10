@@ -1,5 +1,6 @@
 package perseus
 
+// InUint16 returns whether i is in list
 func InUint16(i uint16, list []uint16) bool {
 	for _, b := range list {
 		if b == i {
@@ -9,6 +10,7 @@ func InUint16(i uint16, list []uint16) bool {
 	return false
 }
 
+// IndexUint16 returns the position of s in list. If s is not found, return -1.
 func IndexUint16(s uint16, list []uint16) int {
 	for i, b := range list {
 		if b == s {
@@ -18,36 +20,42 @@ func IndexUint16(s uint16, list []uint16) int {
 	return -1
 }
 
+// ShiftUint16 returns the first element of slice and other element's slice.
 func ShiftUint16(slice []uint16) (uint16, []uint16) {
-	x, s := slice[0], slice[1:]
-	return x, s
+	return slice[0], slice[1:]
 }
 
+// UnshiftUint16 add an element to the beginning of a slice.
 func UnshiftUint16(sep uint16, i []uint16) []uint16 {
 	return append([]uint16{sep}, i...)
 }
 
+// DeleteUint16 delete specified element from slice
 func DeleteUint16(slice []uint16, sep uint16) []uint16 {
 	return append(slice[:sep], slice[sep+1:]...)
 }
 
+// CutUint16 Delete from i to j from the slice
 func CutUint16(slice []uint16, i, j uint16) []uint16 {
 	return append(slice[:i], slice[j:]...)
 }
 
+// InsertUint16 insert element to specified position
 func InsertUint16(slice []uint16, element, position uint16) []uint16 {
 	return append(slice[:position], append([]uint16{element}, slice[position:]...)...)
 }
 
+// InsertVectorUint16 insert slice to specified position
 func InsertVectorUint16(origin, insert []uint16, position uint16) []uint16 {
 	return append(origin[:position], append(insert, origin[position:]...)...)
 }
 
+// PopUint16 returns the last element of slice and other element's slice.
 func PopUint16(slice []uint16) (uint16, []uint16) {
-	x, s := slice[len(slice)-1], slice[:len(slice)-1]
-	return x, s
+	return slice[0], slice[1:]
 }
 
+// ReversedUint16 returns reversed slice
 func ReversedUint16(slice []uint16) []uint16 {
 	for left, right := 0, len(slice)-1; left < right; left, right = left+1, right-1 {
 		slice[left], slice[right] = slice[right], slice[left]
@@ -55,6 +63,7 @@ func ReversedUint16(slice []uint16) []uint16 {
 	return slice
 }
 
+// ExtendUint16 connect slices together
 func ExtendUint16(A, B []uint16) []uint16 {
 	return append(A, B...)
 }

@@ -1,5 +1,6 @@
 package perseus
 
+// InUint8 returns whether i is in list
 func InUint8(i uint8, list []uint8) bool {
 	for _, b := range list {
 		if b == i {
@@ -9,6 +10,7 @@ func InUint8(i uint8, list []uint8) bool {
 	return false
 }
 
+// IndexUint8 returns the position of s in list. If s is not found, return -1.
 func IndexUint8(s uint8, list []uint8) int {
 	for i, b := range list {
 		if b == s {
@@ -18,36 +20,42 @@ func IndexUint8(s uint8, list []uint8) int {
 	return -1
 }
 
+// ShiftUint8 returns the first element of slice and other element's slice.
 func ShiftUint8(slice []uint8) (uint8, []uint8) {
-	x, s := slice[0], slice[1:]
-	return x, s
+	return slice[0], slice[1:]
 }
 
+// UnshiftUint8 add an element to the beginning of a slice.
 func UnshiftUint8(sep uint8, i []uint8) []uint8 {
 	return append([]uint8{sep}, i...)
 }
 
+// DeleteUint8 specified element from slice
 func DeleteUint8(slice []uint8, sep uint8) []uint8 {
 	return append(slice[:sep], slice[sep+1:]...)
 }
 
+// CutUint8 Delete from i to j from the slice
 func CutUint8(slice []uint8, i, j uint8) []uint8 {
 	return append(slice[:i], slice[j:]...)
 }
 
+// InsertUint8 element to specified position
 func InsertUint8(slice []uint8, element, position uint8) []uint8 {
 	return append(slice[:position], append([]uint8{element}, slice[position:]...)...)
 }
 
+// InsertVectorUint8 slice to specified position
 func InsertVectorUint8(origin, insert []uint8, position uint8) []uint8 {
 	return append(origin[:position], append(insert, origin[position:]...)...)
 }
 
+// PopUint8 returns the last element of slice and other element's slice.
 func PopUint8(slice []uint8) (uint8, []uint8) {
-	x, s := slice[len(slice)-1], slice[:len(slice)-1]
-	return x, s
+	return slice[0], slice[1:]
 }
 
+// ReversedUint8 returns reversed slice
 func ReversedUint8(slice []uint8) []uint8 {
 	for left, right := 0, len(slice)-1; left < right; left, right = left+1, right-1 {
 		slice[left], slice[right] = slice[right], slice[left]
@@ -55,6 +63,7 @@ func ReversedUint8(slice []uint8) []uint8 {
 	return slice
 }
 
+// ExtendUint8 connect slices together
 func ExtendUint8(A, B []uint8) []uint8 {
 	return append(A, B...)
 }
