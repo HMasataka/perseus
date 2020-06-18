@@ -67,3 +67,21 @@ func ReversedUint32(slice []uint32) []uint32 {
 func ExtendUint32(A, B []uint32) []uint32 {
 	return append(A, B...)
 }
+
+// SumUint32 calculate summaries of arguments
+func SumUint32(values ...uint32) uint32 {
+	var sum uint32
+	for _, v := range values {
+		sum += v
+	}
+	return sum
+}
+
+// SumUintToUint64 calculate summaries of arguments
+func SumUnt32ToUint64(values ...uint32) uint64 {
+	var sum uint64
+	for _, v := range values {
+		sum += uint64(v)
+	}
+	return sum
+}

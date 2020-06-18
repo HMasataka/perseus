@@ -67,3 +67,21 @@ func ReversedInt8(slice []int8) []int8 {
 func ExtendInt8(A, B []int8) []int8 {
 	return append(A, B...)
 }
+
+// SumInt8 calculate summaries of arguments
+func SumInt8(values ...int8) int8 {
+	var sum int8
+	for _, v := range values {
+		sum += v
+	}
+	return sum
+}
+
+// SumInt8ToInt64 calculate summaries of arguments
+func SumInt8ToInt64(values ...int8) int64 {
+	var sum int64
+	for _, v := range values {
+		sum += int64(v)
+	}
+	return sum
+}
