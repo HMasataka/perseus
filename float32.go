@@ -67,3 +67,21 @@ func ReversedFloat32(slice []float32) []float32 {
 func ExtendFloat32(A, B []float32) []float32 {
 	return append(A, B...)
 }
+
+// SumFloat32 calculate summaries of arguments
+func SumFloat32(values ...float32) float32 {
+	var sum float32
+	for _, v := range values {
+		sum += v
+	}
+	return sum
+}
+
+// SumFloat32ToFloat64 calculate summaries of arguments
+func SumFloat32ToFloat64(values ...float32) float64 {
+	var sum float64
+	for _, v := range values {
+		sum += float64(v)
+	}
+	return sum
+}
