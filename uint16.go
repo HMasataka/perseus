@@ -68,20 +68,25 @@ func ExtendUint16(A, B []uint16) []uint16 {
 	return append(A, B...)
 }
 
-// SumUint16 calculate summaries of arguments
-func SumUint16(values ...uint16) uint16 {
-	var sum uint16
-	for _, v := range values {
-		sum += v
-	}
-	return sum
-}
-
-// SumUint16ToUint64 calculate summaries of arguments
-func SumUnt16ToUint64(values ...uint16) uint64 {
+func sumUint16(values ...uint16) uint64 {
 	var sum uint64
 	for _, v := range values {
 		sum += uint64(v)
 	}
 	return sum
+}
+
+// SumUint16 calculate summaries of arguments
+func SumUint16(values ...uint16) uint16 {
+	return uint16(sumUint16(values...))
+}
+
+// SumUint16ToUint64 calculate summaries of arguments
+func SumUint16ToUint64(values ...uint16) uint64 {
+	return sumUint16(values...)
+}
+
+// SumUint16ToUint calculate summaries of arguments
+func SumUint16ToUint(values ...uint16) uint {
+	return uint(sumUint16(values...))
 }

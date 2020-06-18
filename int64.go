@@ -69,11 +69,20 @@ func ExtendInt64(A, B []int64) []int64 {
 	return append(A, B...)
 }
 
-// SumInt64 calculate summaries of arguments
-func SumInt64(values ...int64) int64 {
+func sumInt64(values ...int64) int64 {
 	var sum int64
 	for _, v := range values {
 		sum += v
 	}
 	return sum
+}
+
+// SumInt64 calculate summaries of arguments
+func SumInt64(values ...int64) int64 {
+	return sumInt64(values...)
+}
+
+// SumInt64ToInt calculate summaries of arguments
+func SumInt64ToInt(values ...int64) int {
+	return int(sumInt64(values...))
 }

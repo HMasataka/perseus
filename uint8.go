@@ -68,20 +68,25 @@ func ExtendUint8(A, B []uint8) []uint8 {
 	return append(A, B...)
 }
 
-// SumUint8 calculate summaries of arguments
-func SumUint8(values ...uint8) uint8 {
-	var sum uint8
-	for _, v := range values {
-		sum += v
-	}
-	return sum
-}
-
-// SumUint8ToUint64 calculate summaries of arguments
-func SumUnt8ToUint64(values ...uint) uint64 {
+func sumUint8(values ...uint8) uint64 {
 	var sum uint64
 	for _, v := range values {
 		sum += uint64(v)
 	}
 	return sum
+}
+
+// SumUint8 calculate summaries of arguments
+func SumUint8(values ...uint8) uint8 {
+	return uint8(sumUint8(values...))
+}
+
+// SumUint8ToUint64 calculate summaries of arguments
+func SumUint8ToUint64(values ...uint8) uint64 {
+	return sumUint8(values...)
+}
+
+// SumUint8ToUint calculate summaries of arguments
+func SumUint8ToUint(values ...uint8) uint {
+	return uint(sumUint8(values...))
 }
