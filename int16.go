@@ -67,3 +67,21 @@ func ReversedInt16(slice []int16) []int16 {
 func ExtendInt16(A, B []int16) []int16 {
 	return append(A, B...)
 }
+
+// SumInt16 calculate summaries of arguments
+func SumInt16(values ...int16) int16 {
+	var sum int16
+	for _, v := range values {
+		sum += v
+	}
+	return sum
+}
+
+// SumInt16ToInt64 calculate summaries of arguments
+func SumInt16ToInt64(values ...int16) int64 {
+	var sum int64
+	for _, v := range values {
+		sum += int64(v)
+	}
+	return sum
+}

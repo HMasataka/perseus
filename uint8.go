@@ -67,3 +67,21 @@ func ReversedUint8(slice []uint8) []uint8 {
 func ExtendUint8(A, B []uint8) []uint8 {
 	return append(A, B...)
 }
+
+// SumUint8 calculate summaries of arguments
+func SumUint8(values ...uint8) uint8 {
+	var sum uint8
+	for _, v := range values {
+		sum += v
+	}
+	return sum
+}
+
+// SumUint8ToUint64 calculate summaries of arguments
+func SumUnt8ToUint64(values ...uint) uint64 {
+	var sum uint64
+	for _, v := range values {
+		sum += uint64(v)
+	}
+	return sum
+}
