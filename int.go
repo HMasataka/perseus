@@ -67,3 +67,12 @@ func ReversedInt(slice []int) []int {
 func ExtendInt(A, B []int) []int {
 	return append(A, B...)
 }
+
+// Sum calculate summaries of arguments
+func Sum(values ...int) int {
+	sum := 0
+	for _, v := range values {
+		sum += v
+	}
+	return sum
+}
