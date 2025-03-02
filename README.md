@@ -1,35 +1,20 @@
 # perseus
 
-Go slice operation extension
+Go lang utils
 
 ## Supported Function
 
-- In
-- Index
+## Slice
+
 - Shift
-- Unshift
-- Delete
+- Prepend
+- Remove
 - Cut
 - Insert
 - InsertVector
 - Pop
-- Reversed
 - Extend
-
-## Supported Type
-
-- int
-- int8
-- int16
-- int32
-- int64
-- uint
-- uint8
-- uint16
-- uint32
-- uint64
-- float32
-- float64
+- Sum
 
 ## Document
 
