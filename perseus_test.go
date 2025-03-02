@@ -3,7 +3,7 @@ package perseus_test
 import (
 	"fmt"
 
-	"github.com/sylba2050/perseus"
+	"github.com/HMasataka/perseus"
 )
 
 func ExampleInInt() {

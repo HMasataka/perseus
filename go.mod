@@ -1,3 +1,3 @@
-module github.com/sylba2050/perseus
+module github.com/HMasataka/perseus
 
-go 1.12
+go 1.24.0

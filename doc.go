@@ -1,2 +1,2 @@
-// Package perseus is golang slice operation extension
+// Package perseus is golang util operation
 package perseus
