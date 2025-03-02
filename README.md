@@ -2,7 +2,11 @@
 
 Go lang utils
 
-## Supported Function
+## Supported Features
+
+## Type
+
+- Number
 
 ## Slice
 
