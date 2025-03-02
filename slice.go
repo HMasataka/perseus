@@ -42,10 +42,6 @@ func Extend[T any](A, B []T) []T {
 	return append(A, B...)
 }
 
-type Number interface {
-	constraints.Integer | constraints.Float
-}
-
 func Sum[T Number](values []T) T {
 	var sum T
 
