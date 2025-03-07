@@ -51,3 +51,14 @@ func Sum[T Number](values []T) T {
 
 	return sum
 }
+
+func Repeat[T any](count int, v ...T) []T {
+	l := count * len(v)
+	xs := make([]T, l)
+
+	for i := 0; i < l; i += len(v) {
+		copy(xs[i:], v)
+	}
+
+	return xs
+}
